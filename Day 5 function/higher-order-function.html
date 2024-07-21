@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //task 9
+        const callback = function (count)
+        {
+            console.log("this callback is called ",count);
+        }
+
+        function higherOrder(num,callback)
+        {
+            for(let i=0;i<num;i++){
+                callback(i+1);
+            }
+        }
+
+        higherOrder(4,callback)
+        higherOrder(5,callback)
+
+        //task 10
+
+       function square(value)
+       {
+        return value * value
+       }
+       function showResult(res)
+       {
+        console.log("higher order function result : ",res);
+       }
+
+       function higherOder2(val,square,showResult)
+       {
+            showResult(square(val));
+       }
+
+       higherOder2(12,square,showResult);
+
+        
+
+
+
+    </script>
+</body>
+</html>
