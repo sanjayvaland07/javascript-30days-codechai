@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li>Motoroal</li>
+        <li>Lenovo</li>
+    </ul>
+    <script>
+        const body = document.getElementsByTagName("body")[0]; 
+        const div = document.createElement("div");
+        div.innerHTML = "this is a div";
+        body.appendChild(div);
+        const ul = document.querySelector("ul");
+        const li = document.createElement("li");
+        li.innerHTML = "apple";
+        ul.appendChild(li)
+    </script>
+</body>
+</html>

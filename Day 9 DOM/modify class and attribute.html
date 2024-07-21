@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .shadow{
+            box-shadow: 5px 5px 10px red;
+        }
+        .filter{
+            filter: drop-shadow(5px 5px 10px red);
+        }
+    </style>
+</head>
+<body>
+    <img class="" src="img1.png" alt="img">
+    <button onclick="change()">change image</button>
+    <script>
+        const img = document.querySelector("img");
+        img.classList.add("shadow")
+        function change()
+        {
+            img.setAttribute("src","img2.png")
+            img.classList.add("filter")
+            img.classList.remove("shadow")
+        }
+    </script>
+</body>
+</html>

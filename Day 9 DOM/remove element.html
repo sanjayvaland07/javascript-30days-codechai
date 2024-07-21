@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        this is a div
+    </div>
+    <ul>
+        <li>Motoroal</li>
+        <li>Lenovo</li>
+        <li>Realme</li>
+    </ul>
+    <script>
+        const body = document.querySelector("body");
+        const div = document.querySelector("div")
+        body.removeChild(div)
+        const ul = document.querySelector("ul");
+        ul.removeChild(ul.lastElementChild)
+        
+    </script>
+</body>
+</html>
