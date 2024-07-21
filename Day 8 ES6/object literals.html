@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>object literals</title>
+</head>
+<body>
+    <script>
+        //task 8
+        let obj = {
+            num1 : 12,
+            num2 : 13,
+            sum(){
+                console.log(this.num1+this.num2);
+            }
+
+        }
+
+        obj.sum();
+        console.log(obj);
+
+        //task 9
+        console.log(obj['num1']);
+    </script>
+</body>
+</html>

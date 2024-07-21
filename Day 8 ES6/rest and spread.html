@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>rest and spread</title>
+</head>
+<body>
+    <script>
+        //task 5
+        const arr = [1,2,3,4,5];
+        console.log(arr);
+        let arr2 = [...arr,6,7];
+        console.log(arr2);
+
+        //task 6
+        function sum(...arr){
+            let result = 0
+            for(Element of arr){
+                result += Element
+            }
+
+            return result
+        }
+
+        const result = sum(1,2,3,4,5,6,7,8,9,10)
+        console.log(result);
+    </script>
+</body>
+</html>
