@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>keyboard even</title>
+</head>
+<body>
+    <input type="text" name="" id="inputbox">
+    <div class="container">
+        <p></p>
+    </div>
+    <script>
+        const inputbox = document.querySelector("#inputbox");
+        const p = document.querySelector("p");
+        let downkey=0,upkey = 0;
+        inputbox.addEventListener("keydown",()=>{
+            downkey++;
+            console.log(`keyboard down key is pressed ${downkey}`);
+        })
+        inputbox.addEventListener("keyup",()=>{
+            upkey++;
+            console.log(`keyboard up key is pressed ${upkey}`);
+            p.innerText = inputbox.value;
+        })
+
+    </script>
+</body>
+</html>

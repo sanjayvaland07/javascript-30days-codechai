@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            width: 300px;
+            height: 300px;
+            border: 1px solid black;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        button{
+            width: 100px;
+            height: 30px;
+            background-color: blue;
+            color: white;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <p>this is a paragraph tag</p>
+        <button id="btn">click here</button><br>
+    </div>
+    <div class="container">
+        <img src="img1.png" alt="" width="200" height="200">
+    <button id="dbl">double click</button>
+    </div>
+    <script>
+        //task 1
+        const par = document.querySelector("p");
+        const btn = document.querySelector("#btn");
+        let count = 0;
+        btn.addEventListener("click",()=>{
+            count++;
+            par.innerText = `button is clicked ${count}`;
+        })
+
+        //task 2
+
+        const img = document.querySelector("img");
+        const doubleclick = document.querySelector("#dbl");
+        doubleclick.addEventListener("dblclick",()=>{
+            if(img.getAttribute("src") == "img1.png"){
+                img.setAttribute("src","img2.png");
+            }
+            else{
+                img.setAttribute("src","img1.png")
+            }
+        })
+    </script>
+</body>
+</html>

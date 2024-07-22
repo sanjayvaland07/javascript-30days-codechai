@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mouse event</title>
+    <style>
+        .container{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            width: 250px;
+            height: 250px;
+            font-size: 1.3rem;
+            background-color: #40e0d0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <div class="container" id="box">
+        Mouse over on this box
+    </div>
+    <script>
+        const box = document.querySelector("#box");
+        box.addEventListener("mouseover",()=>{
+            box.style = "background-color:blue;color:white;";   
+        })
+        box.addEventListener("mouseout",()=>{
+            box.style = "background-color:#40e0d0;color:black;";
+        })
+    </script>
+</body>
+</html>

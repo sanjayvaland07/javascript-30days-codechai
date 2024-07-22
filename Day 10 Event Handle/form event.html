@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            width: 250px;
+            height: 250px;
+            border: 1px solid black;
+            padding: 10px;
+        }
+        .container form{
+            width: 100%;
+            height: 100%;
+            text-align: center;
+        }
+        .container input,select{
+            width: 90%;
+            height: 20px;
+            padding: 10px;
+            margin-bottom: 5px;
+        }
+        .container select{
+            padding: 0;
+        }
+        .container button{
+            width: 150px;
+            height: 30px;
+            margin-top: 10px;
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <form action="">
+        <input type="text" name="" id="name" placeholder="Enter your name">
+        <input type="number" name="" id="age" placeholder="Enter your age">
+        <p>Select your favourite language : </p>
+        <select name="" id="dropdown">
+            <option value="non">select language</option>
+            <option value="javascript">javascript</option>
+            <option value="java">java</option>
+            <option value="python">python</option>
+        </select>
+        <br>
+        <button>Submit</button>
+        </form>
+    </div>
+    <script>
+        const form = document.querySelector("form");
+        const name = document.querySelector("#name");
+        const age = document.querySelector("#age");
+        form.addEventListener("submit",(e)=>{
+            e.preventDefault();
+            console.log("name : "+name.value);
+            console.log("age : "+age.value);
+        })
+
+        const dropdown = document.querySelector("#dropdown");
+        const p = document.querySelector("p");
+        dropdown.addEventListener("change",()=>{
+            console.log("language : "+dropdown.value);
+            p.innerText = "Select your favourite language : " + dropdown.value;
+        })
+    </script>
+</body>
+</html>
