@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fetch data from api</title>
+</head>
+<body>
+    <script>
+        //task 6 fetch data using promise
+        function getUsingPromise()
+        {
+            let data = fetch("https://jsonplaceholder.typicode.com/albums/1")
+            .then((res)=>{
+                console.log("result from api : ",res);
+                return res.json();
+                
+            }).then((data)=>{
+                console.log("result in json : ",data);
+                return "success"
+            }).catch((err)=>{
+                console.log("error : ",err);
+            })
+            return data;
+        }
+
+        let data1 = getUsingPromise();
+
+        //task 7 fetch data using async method
+        async function asyncFunction(){
+            let fetchData = await fetch("https://jsonplaceholder.typicode.com/albums/2")
+            console.log("fetch from asysc function",fetchData);
+            let data = await fetchData.json()
+            console.log("fetch data from api",data);
+            return "success"
+        }
+
+        let data2 = asyncFunction();
+    </script>
+</body>
+</html>

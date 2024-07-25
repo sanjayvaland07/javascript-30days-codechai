@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>promises</title>
+</head>
+<body>
+    <script>
+        //task 1 and task 2
+        function showMsg(data){
+            return new Promise((resolve,reject)=>{
+                setTimeout(()=>{
+                    console.log("data : ",data);
+                    if(data>=0){
+                        resolve("success")
+                    }
+                    else{
+                        reject("error : your data is less then zero")
+                    }
+                },2000)
+            })
+        }
+
+        let promise = showMsg(1);
+        let promise2 = showMsg(-10);
+    </script>
+</body>
+</html>
